@@ -38,6 +38,21 @@ header{
 
 .logo{
     height: 100px;
+    animation-name: logoheader;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+@keyframes logoheader {
+        0%{
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 100;
+        }
+    
 }
 
 /* Menu Superior */
@@ -58,6 +73,7 @@ header{
     margin: 0 10px;
 }
 
+
 .menu_superior > li > a{
     display: block;
     padding: 8px 8px;
@@ -68,9 +84,9 @@ header{
 }
 
 .menu_superior li a:hover{
-    background-color:rgb(233, 140, 0) ;
+    background-image: linear-gradient(#de6262, #ffb88c);
     color: white;
-    transition: .3s;
+    transition: all .3s;
 }
 
 
@@ -123,10 +139,12 @@ header{
     margin-top: 20px;
     height: 300px;
     width: 600px;
+    transform: scale(1.1);
 }
 .history{
     margin: 80px 400px 0px 400px
 }
+
 
 /*------------------------------------------- OBRAS */
 
@@ -174,6 +192,13 @@ header{
     object-fit: cover;
     box-shadow: 0 8px 10px -4px rgba(0, 0, 0,); 
     border-radius: 15px;
+}
+.zoom{
+    transition: transform 0.2s;
+}
+.zoom:hover{
+    transform: scale(1.1);
+
 }
 
 /* Para definir distintos tamaños para las imagenes y las filas a ocupar */
